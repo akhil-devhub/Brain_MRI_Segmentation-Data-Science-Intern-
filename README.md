@@ -1,61 +1,198 @@
-# Brain_MRI_Segmentation-Data-Science-Intern
-# Description 👈
+# 🧠 Brain MRI Segmentation
 
-This system was created to provide a simple and secure method of recording attendance. The software initially takes a picture of all of the authorised people and stores it in a database. The image is then stored by mapping it into a face coordinate structure by the system. Whenever a registered person enters the premises, the system recognises him and records his time and attendance.
-Credentials for frontend login page
+An AI-powered project for **automatic brain tumor segmentation** from MRI scans using Deep Learning techniques.
 
-## Username: admin Password: admin
-Prerequisites
+---
 
-    Node.js 14 or later - install from https://nodejs.org/
-    Python 3.x or later - install from https://www.python.org/
+## 📌 Project Overview
 
-### Installing python packages:
+Brain MRI Segmentation is a medical imaging project that uses **Deep Learning models** to identify and segment tumor regions from MRI scans.
 
-    Open the Terminal (Linux & MacOS) or PowerShell (Windows)
-    Type "pip install numpy" after it gets installed.
-    Type "pip install opencv-python" after it gets installed.
-    Type "pip install requests" after it gets installed.
+This system helps in:
 
-### Installing Face_Recognition module
+* Detecting brain tumors
+* Highlighting affected regions
+* Assisting doctors in diagnosis
+* Improving medical image analysis
 
-    Type "pip install cmake" after it gets installed.
-    Type "pip install dlib" after it gets installed.
-    Type "pip install face_recognition" after it gets installed.
-    Now if all the modules got installed correctly attendance.py should run correctly.
+---
 
-### Installing packages:
+## 🎯 Aim
 
-    Download the repository
+To develop a model that can:
 
-git clone (https://github.com/Akhil20003/Attendance-Detectio-Model/tree/main)
+* Accurately segment brain tumors from MRI images
+* Reduce manual effort in medical diagnosis
+* Provide fast and reliable results
 
-    Open the Terminal (Linux & MacOS) or PowerShell (Windows) and change directory to the project folder.
-    Type ‘npm install’ in the Terminal (PowerShell) and press Enter. All the dependencies would be installed.
-    Now make sure you are in backend folder. To open the application, type ‘npm run server’ and press Enter in the terminal.
-    The application should be live on the local port 8080.
-    Now go to face recognition folder and open attendance.py.
+---
 
-**If all the packages got installed correctly the program should run without any problem.
-## How to use it 📖
-Node Server
-Open terminal in VS Code then type "npm run server". This should start your node server if you have installed all the packages
-![Nodeserver](https://github.com/user-attachments/assets/d7eb2cce-bfdf-45c7-9583-987e5c0ddd3f)
+## 🧾 Description
 
-## Face Detection Working
-Open Face Recognition folder then open attendance.py and run the file. To close the camera window just press "Enter Key" on keyboard
+The project uses **Convolutional Neural Networks (CNNs)** for image segmentation.
 
-## How to add new Students
-To add a new student copy the picture of the student into the image folder with this convention 
-"Roll_Name_branch.jpg"
-## Database
-![database](https://github.com/user-attachments/assets/3019ac64-b30e-4e36-a222-8ca34739a15f)
+The model takes MRI scans as input and outputs:
 
-## Training models
-![image](https://github.com/user-attachments/assets/ca3b0766-f7c5-4628-b38e-b13c46e53971)
+* Segmented tumor region
+* Mask highlighting abnormal areas
 
+---
 
-## Contact Details: 
-phno: 8179421105
-email: mrjohnwickk007@mail.com
+## ✨ Features
 
+✔ Automatic tumor detection
+✔ Pixel-wise image segmentation
+✔ High accuracy using deep learning
+✔ Supports grayscale MRI images
+✔ Visualization of segmented output
+
+---
+
+## 🛠 Technologies Used
+
+* **Language:** Python
+* **Libraries:**
+
+  * TensorFlow / Keras
+  * OpenCV
+  * NumPy
+  * Matplotlib
+* **Model:** U-Net / CNN
+
+---
+
+## 🧠 Model Architecture
+
+### 🔷 U-Net Architecture
+
+* Encoder (Downsampling path)
+* Bottleneck
+* Decoder (Upsampling path)
+* Skip connections for better accuracy
+
+---
+
+## 📂 Dataset
+
+* Brain MRI images dataset
+* Contains:
+
+  * Normal images
+  * Tumor images
+  * Ground truth masks
+
+*(Example datasets: Kaggle Brain MRI Dataset)*
+
+---
+
+## ⚙️ Workflow
+
+1. Data Collection
+2. Data Preprocessing
+3. Model Training
+4. Image Segmentation
+5. Evaluation
+6. Visualization
+
+---
+
+## 🔄 Methodology
+
+### 1. Data Preprocessing
+
+* Resize images
+* Normalize pixel values
+* Convert to grayscale
+
+### 2. Model Training
+
+* Train CNN/U-Net model
+* Use loss functions like Dice Loss / Binary Crossentropy
+
+### 3. Segmentation
+
+* Generate masks for tumor regions
+
+### 4. Evaluation
+
+* Accuracy
+* Dice Coefficient
+* IoU Score
+
+---
+
+## 📊 Results
+
+* Clear segmentation of tumor regions
+* Improved accuracy with U-Net
+* Visual comparison between original and segmented images
+
+---
+
+## ▶️ How to Run
+
+### 1. Install Dependencies
+
+```bash id="dep1"
+pip install tensorflow opencv-python numpy matplotlib
+```
+
+### 2. Run the Project
+
+```bash id="run1"
+python train.py
+python predict.py
+```
+
+---
+
+## 📁 Project Structure
+
+```bash id="struct1"
+Brain-MRI-Segmentation/
+│── dataset/
+│── models/
+│── train.py
+│── predict.py
+│── utils.py
+│── README.md
+```
+
+---
+
+## 📸 Output
+
+* Input MRI image
+* Ground truth mask
+* Predicted segmentation mask
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates:
+
+* Application of Deep Learning in healthcare
+* Image segmentation using CNN/U-Net
+* Real-world problem-solving in medical imaging
+
+---
+
+## 🚀 Future Enhancements
+
+* 3D MRI segmentation
+* Multi-class tumor classification
+* Web-based interface
+* Integration with hospital systems
+
+---
+
+## 👨‍💻 Author
+
+**Ganesh Sesha Sai Akhil Koutarapu**
+
+---
+
+## 📣 Support
+
+If you found this project helpful, give it a ⭐ on GitHub!
